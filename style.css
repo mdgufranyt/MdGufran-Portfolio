@@ -168,7 +168,9 @@ body {
     text-shadow: 0 0 5px var(--neon-blue-glow);
   }
   to {
-    text-shadow: 0 0 20px var(--neon-blue-glow), 0 0 30px var(--neon-blue-glow);
+    text-shadow:
+      0 0 20px var(--neon-blue-glow),
+      0 0 30px var(--neon-blue-glow);
   }
 }
 
@@ -355,7 +357,9 @@ body {
     border-color: var(--neon-blue);
   }
   to {
-    box-shadow: 0 0 30px var(--neon-blue-glow), 0 0 40px var(--neon-blue-glow);
+    box-shadow:
+      0 0 30px var(--neon-blue-glow),
+      0 0 40px var(--neon-blue-glow);
     border-color: rgba(0, 128, 255, 0.8);
   }
 }
@@ -679,29 +683,33 @@ body {
 
 /* Skills Section */
 .skills-content {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 3rem;
-  max-width: 1000px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
 .skills-category {
-  text-align: center;
+  text-align: left;
 }
 
 .skills-category-title {
   font-size: 1.8rem;
   color: var(--neon-blue);
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   font-weight: 600;
   text-shadow: var(--text-glow);
+  text-align: center;
 }
 
 .skills-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+  justify-content: flex-start;
+  padding: 0.5rem 0;
 }
 
 .skill-tag {
@@ -744,7 +752,30 @@ body {
   left: 100%;
 }
 
-/* Projects Section */
+.skill-tag.skill-label {
+  background: transparent;
+  border: none;
+  border-right: 2px solid rgba(0, 255, 255, 0.4);
+  border-radius: 0;
+  color: var(--neon-blue);
+  font-weight: 700;
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.5rem 1rem 0.5rem 0;
+  min-width: 120px;
+  cursor: default;
+  box-shadow: none;
+  flex-shrink: 0;
+}
+
+.skill-tag.skill-label:hover {
+  transform: none;
+  box-shadow: none;
+  border-color: rgba(0, 255, 255, 0.4);
+  border-radius: 0;
+  color: var(--neon-blue);
+}
 .projects-content {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -1139,6 +1170,4 @@ body {
   .contact-info {
     gap: 1rem;
   }
-
-  
 }
